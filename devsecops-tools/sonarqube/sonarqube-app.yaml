@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<YOUR_USERNAME>/devsecops-gitops.git
-    targetRevision: main
+    repoURL: https://github.com/your-repo/argocd-apps
+    targetRevision: HEAD
     path: devsecops-tools/sonarqube
   destination:
     server: https://kubernetes.default.svc
@@ -16,3 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
