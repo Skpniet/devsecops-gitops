@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jenkins
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<YOUR_USERNAME>/devsecops-gitops.git
+    targetRevision: main
+    path: devsecops-tools/jenkins
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: jenkins
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
