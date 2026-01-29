@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-repo/argocd-apps
+    repoURL: https://github.com/Skpniet/devsecops-gitops.git
     targetRevision: HEAD
     path: devsecops-tools
   destination:

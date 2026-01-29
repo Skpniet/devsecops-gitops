@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<YOUR_USERNAME>/devsecops-gitops.git
+    repoURL: https://github.com/Skpniet/devsecops-gitops.git
     targetRevision: main
     path: devsecops-tools/jenkins
   destination:
